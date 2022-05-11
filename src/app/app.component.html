@@ -1,0 +1,16 @@
+<app-header></app-header>
+<main>
+    <section class="jumbotron">
+        <div class="container d-flex flex-column align-items-center">
+            <p class="text-muted">برای شروع، یک مورد را به لیست خود اضافه کنید
+            </p>
+            <br>
+            <app-form (Add)="addTodo($event)"></app-form>
+        </div>
+    </section>
+    <div class="todosList">
+        <div class="container">
+            <app-todos [todos]="todos" (delete)="deleteTodo($event)" (done)="toggletodo($event)"></app-todos>
+        </div>
+    </div>
+</main>
